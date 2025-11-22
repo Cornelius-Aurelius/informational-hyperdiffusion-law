@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Informational Hyperdiffusion Law — Cornelius Aurelius</title>
+
+<meta name="description" content="A scientific overview and verification of the Informational Hyperdiffusion Law. Demonstrates the collapse of fourth-derivative energy under high-order diffusion. Includes computational results, spectral behaviour, interpretations, and peer-review links.">
+<meta name="theme-color" content="#00c8ff">
+<meta name="author" content="Cornelius Aurelius">
+
+<style>
+/* GLOBAL BRANDING */
+body {
+  margin: 0;
+  background: #000;
+  color: #9ee7ff;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 70px 20px;
+  background: radial-gradient(circle at center, #001d2f, #000);
+  border-bottom: 2px solid #00c8ff;
+}
+header h1 {
+  font-size: 2.8rem;
+  color: #00c8ff;
+  margin: 0;
+  animation: glow 3.5s infinite ease-in-out;
+  text-shadow: 0 0 25px #00c8ff;
+}
+@keyframes glow {
+  0%   { text-shadow: 0 0 20px #00c8ff; }
+  50%  { text-shadow: 0 0 42px #3ee9ff; }
+  100% { text-shadow: 0 0 20px #00c8ff; }
+}
+.timestamp {
+  opacity: 0.55;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+/* CONTENT SECTIONS */
+section {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  line-height: 1.7;
+}
+
+h2 {
+  color: #00c8ff;
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 12px #008fbf;
+}
+
+p, li {
+  font-size: 1.18rem;
+}
+
+/* CODE BLOCK */
+.code-block {
+  background: #00141f;
+  padding: 22px;
+  border-radius: 10px;
+  border: 1px solid #00c8ff55;
+  color: #b1eaff;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  margin-top: 20px;
+}
+
+/* BOXES */
+.thoughtbox {
+  background: #001622;
+  padding: 22px;
+  border-left: 5px solid #00c8ff;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+.factbox {
+  background: #002035;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #00c8ff55;
+  margin-top: 40px;
+  box-shadow: 0 0 28px #00c8ff33 inset;
+}
+
+/* BUTTONS */
+a.button {
+  display: inline-block;
+  padding: 14px 24px;
+  background: #003a5c;
+  border-radius: 8px;
+  border: 1px solid #00c8ff;
+  color: #9ee7ff;
+  text-decoration: none;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+a.button:hover {
+  background: #005a8c;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 60px;
+  padding: 45px;
+  background: #000814;
+  text-align: center;
+  border-top: 2px solid #00c8ff;
+}
+footer a {
+  color: #00c8ff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+footer a:hover { text-decoration: underline; }
+
+/* MOBILE */
+@media(max-width:600px){
+  header h1 { font-size: 2.3rem; }
+  h2 { font-size: 1.55rem; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Informational Hyperdiffusion Law</h1>
+  <div class="timestamp">Verified: 22 November 2025</div>
+</header>
+
+<section>
+  <h2>Overview</h2>
+  <p>
+    The Informational Hyperdiffusion Law describes the collapse of 
+    fourth-derivative energy in a field subjected to 4th-order diffusion.
+    This form of smoothing is significantly stronger than ordinary
+    Laplacian diffusion, producing extremely rapid attenuation of
+    high-curvature structures.
+  </p>
+
+  <p style="font-size:1.3rem;text-align:center;color:#00c8ff;">
+    <b>Fourth-order diffusion drives accelerated collapse of high-derivative energy.</b>
+  </p>
+
+  <p>
+    The law appears in geometric flows, beam equations, denoising algorithms,
+    high-order PDE systems, and informational geometry models where curvature
+    behaves as a higher-order structural quantity.
+  </p>
+</section>
+
+<section>
+  <h2>Computational Verification</h2>
+
+  <p>
+    The following experiment measures the 4th-derivative energy
+    <code>E = Σ (Δ²A)²</code> as a field evolves under a hyper-Laplacian operator.
+  </p>
+
+  <div class="code-block">
+<pre>
+# Informational field with multi-frequency components
+A = sin(12πx) + 0.5 sin(30πx) + noise
+
+def lap(A): return roll(A,-1) - 2A + roll(A,1)
+def hyper_lap(A): return lap(lap(A))
+
+def hyper_energy(A):
+    return Σ (Δ²A)²
+
+alpha = 0.00005
+E = [hyper_energy(A)]
+
+for step in range(300):
+    A = A - alpha * hyper_lap(A)
+    E.append(hyper_energy(A))
+
+# Result: hyper_energy strictly decreases.
+</pre>
+  </div>
+
+  <p>
+    The recorded energy curve decreases smoothly across all iterations,
+    confirming the expected hyperdiffusive collapse.  
+    (Source: :contentReference[oaicite:1]{index=1})
+  </p>
+</section>
+
+<section>
+  <h2>Thought Experiments</h2>
+
+  <div class="thoughtbox">
+    <b>Metal Beam Under Viscous Bending</b><br><br>
+    Sharp bends in a metal beam flatten rapidly when a viscous smoothing
+    process is applied.  
+    High-curvature regions collapse first, matching fourth-order diffusion behaviour.
+  </div>
+
+  <div class="thoughtbox">
+    <b>High-Frequency Image Noise Removal</b><br><br>
+    Hyperdiffusion acts like an extremely strong higher-order denoiser,
+    eliminating sharp artifacts far faster than low-frequency textures.
+  </div>
+
+  <div class="thoughtbox">
+    <b>Cognitive High-Order Stabilisation</b><br><br>
+    The mind’s most volatile, high-curvature thought patterns collapse first,
+    leaving only broad, stable structures.  
+    A conceptual analogue of hyperdiffusion.
+  </div>
+</section>
+
+<section>
+  <h2>Scientific Interpretation</h2>
+
+  <ul>
+    <li>The evolution equation uses a negative hyper-Laplacian: <code>A ← A − α Δ²A</code>.</li>
+    <li>Energy associated with curvature-of-curvature decays rapidly.</li>
+    <li>The decay rate is proportional to <code>k⁴</code> for harmonic mode k.</li>
+    <li>Thus, high-frequency modes disappear extremely quickly.</li>
+  </ul>
+
+  <div class="factbox">
+    <h3 style="color:#00c8ff;margin-top:0;">Advanced Insight</h3>
+
+    <p>
+      Fourth-order diffusion is strongly linked to:
+    </p>
+
+    <ul>
+      <li>biharmonic heat flow</li>
+      <li>thin-plate spline energies</li>
+      <li>beam bending equations</li>
+      <li>high-order variational regularisation</li>
+      <li>curvature-driven informational geometry</li>
+    </ul>
+
+    <p>
+      Because hyperdiffusion evolves according to a
+      <b>gradient flow of the curvature-squared energy functional</b>,
+      the collapse is guaranteed to be monotonic.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Peer Review</h2>
+  <p>Feedback, improvements, proofs, and generalisations can be submitted via:</p>
+
+  <a class="button" href="mailto:138licensing@gmail.com">Submit via Email</a>
+  <a class="button" href="https://zenodo.org/records/17362534" target="_blank">Submit via Zenodo</a>
+</section>
+
+<footer>
+  <p>© Cornelius Aurelius</p>
+  <p>
+    <a href="https://corneliusaurelius.com/">CORNELIUS AURELIUS MAINSITE</a> |
+    <a href="mailto:138licensing@gmail.com">Email</a> |
+    <a href="https://medium.com/@138licensing">Medium</a> |
+    <a href="https://zenodo.org/records/17362534">Zenodo</a> |
+    <a href="https://www.instagram.com/cornelius_aurelius_/">Instagram</a> |
+    <a href="https://www.linkedin.com/in/cornelius-aurelius-404805325/">LinkedIn</a>
+  </p>
+</footer>
+
+</body>
+</html>

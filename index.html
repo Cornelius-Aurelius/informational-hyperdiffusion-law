@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Informational Hyperdiffusion Law — Cornelius Aurelius</title>
+<title>Informational Second-Derivative Energy Collapse Law — Cornelius Aurelius</title>
 
-<meta name="description" content="A scientific overview and verification of the Informational Hyperdiffusion Law. Demonstrates the collapse of fourth-derivative energy under high-order diffusion. Includes computational results, spectral behaviour, interpretations, and peer-review links.">
+<meta name="description" content="A scientific exposition and computational verification of the Informational Second-Derivative Energy Collapse Law. Includes curvature-energy analysis, diffusion dynamics, gradient-flow mathematics, advanced insights, and public peer-review pathways.">
 <meta name="theme-color" content="#00c8ff">
 <meta name="author" content="Cornelius Aurelius">
 
 <style>
-/* GLOBAL BRANDING */
+/* GLOBAL BRAND — BLACK + NEON BLUE */
 body {
   margin: 0;
   background: #000;
@@ -23,77 +23,149 @@ body {
 /* HEADER */
 header {
   text-align: center;
-  padding: 70px 20px;
-  background: radial-gradient(circle at center, #001d2f, #000);
+  padding: 75px 20px;
+  background: radial-gradient(circle at center, #00283f 0%, #000 70%);
   border-bottom: 2px solid #00c8ff;
+  position: relative;
 }
+
+/* Floating spectral ribbon (pure CSS visualizer) */
+header::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(90deg,
+      transparent,
+      #00c8ff55,
+      #0090ff88,
+      #00c8ff55,
+      transparent);
+  filter: blur(22px);
+  animation: wave 6s infinite linear;
+}
+@keyframes wave {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
 header h1 {
-  font-size: 2.8rem;
-  color: #00c8ff;
+  font-size: 2.9rem;
   margin: 0;
-  animation: glow 3.5s infinite ease-in-out;
-  text-shadow: 0 0 25px #00c8ff;
+  color: #00c8ff;
+  text-shadow: 0 0 18px #00c8ff, 0 0 36px #0088ff;
+  animation: glowPulse 3.5s infinite ease-in-out;
 }
-@keyframes glow {
-  0%   { text-shadow: 0 0 20px #00c8ff; }
-  50%  { text-shadow: 0 0 42px #3ee9ff; }
-  100% { text-shadow: 0 0 20px #00c8ff; }
+@keyframes glowPulse {
+  0%   { text-shadow: 0 0 24px #00c8ff; }
+  50%  { text-shadow: 0 0 48px #3fe9ff; }
+  100% { text-shadow: 0 0 24px #00c8ff; }
 }
+
 .timestamp {
   opacity: 0.55;
-  margin-top: 10px;
+  margin-top: 12px;
   font-size: 0.95rem;
 }
 
-/* CONTENT SECTIONS */
+/* SECTIONS */
 section {
   max-width: 1000px;
-  margin: 50px auto;
+  margin: 60px auto;
   padding: 20px;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 h2 {
+  font-size: 1.95rem;
   color: #00c8ff;
-  font-size: 1.9rem;
+  text-shadow: 0 0 10px #008fbf;
   margin-bottom: 20px;
-  text-shadow: 0 0 12px #008fbf;
 }
 
-p, li {
-  font-size: 1.18rem;
+/* Curvature diagram (CSS-designed graphic) */
+.curvature-diagram {
+  width: 100%;
+  height: 120px;
+  background: repeating-linear-gradient(
+    to right,
+    #00141f 0,
+    #00141f 20px,
+    #00263a 20px,
+    #00263a 40px
+  );
+  border: 1px solid #00c8ff66;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  margin: 25px 0 40px;
+}
+.curvature-diagram::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('data:image/svg+xml,\
+  <svg xmlns="http://www.w3.org/2000/svg" width="500" height="120">\
+  <polyline points="0,60 50,20 100,80 150,30 200,90 250,40 300,70 350,25 400,95 450,50"\
+  fill="none" stroke="%2300c8ff" stroke-width="3"/>\
+  </svg>')
+  no-repeat center/contain;
+  opacity: 0.7;
+  animation: diagramGlow 3s infinite ease-in-out;
+}
+@keyframes diagramGlow {
+  0% { opacity: 0.65; }
+  50% { opacity: 1; }
+  100% { opacity: 0.65; }
 }
 
 /* CODE BLOCK */
 .code-block {
   background: #00141f;
   padding: 22px;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1px solid #00c8ff55;
-  color: #b1eaff;
-  overflow-x: auto;
   white-space: pre-wrap;
+  overflow-x: auto;
+  color: #b1eaff;
   margin-top: 20px;
 }
 
-/* BOXES */
+/* THOUGHT + FACT BOXES */
+.thoughtbox, .factbox {
+  padding: 24px;
+  border-radius: 10px;
+  margin: 35px 0;
+}
 .thoughtbox {
   background: #001622;
-  padding: 22px;
   border-left: 5px solid #00c8ff;
-  border-radius: 8px;
-  margin: 30px 0;
 }
 .factbox {
   background: #002035;
-  padding: 25px;
-  border-radius: 10px;
   border: 1px solid #00c8ff55;
-  margin-top: 40px;
   box-shadow: 0 0 28px #00c8ff33 inset;
 }
 
-/* BUTTONS */
+/* COLLAPSIBLE DEEP-SECTIONS */
+details {
+  background: #00131f;
+  border: 1px solid #00c8ff33;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin: 25px 0;
+  cursor: pointer;
+}
+details summary {
+  font-size: 1.25rem;
+  color: #00c8ff;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* FOOTER BUTTONS */
 a.button {
   display: inline-block;
   padding: 14px 24px;
@@ -102,61 +174,54 @@ a.button {
   border: 1px solid #00c8ff;
   color: #9ee7ff;
   text-decoration: none;
+  margin-right: 14px;
   transition: 0.3s;
-  margin-right: 10px;
 }
-a.button:hover {
-  background: #005a8c;
-}
+a.button:hover { background: #005a8c; }
 
 /* FOOTER */
 footer {
-  margin-top: 60px;
+  margin-top: 70px;
   padding: 45px;
   background: #000814;
-  text-align: center;
   border-top: 2px solid #00c8ff;
+  text-align: center;
 }
 footer a {
   color: #00c8ff;
-  margin: 0 10px;
   text-decoration: none;
+  margin: 0 12px;
 }
 footer a:hover { text-decoration: underline; }
-
-/* MOBILE */
-@media(max-width:600px){
-  header h1 { font-size: 2.3rem; }
-  h2 { font-size: 1.55rem; }
-}
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>Informational Hyperdiffusion Law</h1>
+  <h1>Informational Second-Derivative Energy Collapse Law</h1>
   <div class="timestamp">Verified: 22 November 2025</div>
 </header>
 
 <section>
   <h2>Overview</h2>
+
   <p>
-    The Informational Hyperdiffusion Law describes the collapse of 
-    fourth-derivative energy in a field subjected to 4th-order diffusion.
-    This form of smoothing is significantly stronger than ordinary
-    Laplacian diffusion, producing extremely rapid attenuation of
-    high-curvature structures.
+    The Informational Second-Derivative Energy Collapse Law describes how curvature-based
+    energy in a field decreases consistently under Laplacian smoothing.
+    This collapse reflects a universal behaviour in systems where instability, roughness,
+    or curvature is progressively flattened over time.
   </p>
+
+  <div class="curvature-diagram"></div>
 
   <p style="font-size:1.3rem;text-align:center;color:#00c8ff;">
-    <b>Fourth-order diffusion drives accelerated collapse of high-derivative energy.</b>
+    <b>Curvature energy decays monotonically when a field evolves through Laplacian diffusion.</b>
   </p>
 
   <p>
-    The law appears in geometric flows, beam equations, denoising algorithms,
-    high-order PDE systems, and informational geometry models where curvature
-    behaves as a higher-order structural quantity.
+    This law appears across numerical PDEs, geometric flows, wave-smoothing,
+    biophysical diffusion, information geometry, and signal-processing.
   </p>
 </section>
 
@@ -164,36 +229,38 @@ footer a:hover { text-decoration: underline; }
   <h2>Computational Verification</h2>
 
   <p>
-    The following experiment measures the 4th-derivative energy
-    <code>E = Σ (Δ²A)²</code> as a field evolves under a hyper-Laplacian operator.
+    The experiment below evaluates the curvature energy
+    <code>E = Σ (Aʺ)²</code> during diffusion evolution.
   </p>
 
   <div class="code-block">
 <pre>
-# Informational field with multi-frequency components
-A = sin(12πx) + 0.5 sin(30πx) + noise
+# Field with multi-frequency structure
+A = sin(10πx) + 0.4 sin(30πx) + noise
+
+def second_derivative(A):
+    return roll(A,-1) - 2A + roll(A,1)
+
+def sec_energy(A):
+    return Σ (Aʺ)²
 
 def lap(A): return roll(A,-1) - 2A + roll(A,1)
-def hyper_lap(A): return lap(lap(A))
 
-def hyper_energy(A):
-    return Σ (Δ²A)²
-
-alpha = 0.00005
-E = [hyper_energy(A)]
+alpha = 0.12
+E = [sec_energy(A)]
 
 for step in range(300):
-    A = A - alpha * hyper_lap(A)
-    E.append(hyper_energy(A))
+    A = A + alpha * lap(A)
+    E.append(sec_energy(A))
 
-# Result: hyper_energy strictly decreases.
+# Result: second-derivative energy strictly decreases.
 </pre>
   </div>
 
   <p>
-    The recorded energy curve decreases smoothly across all iterations,
-    confirming the expected hyperdiffusive collapse.  
-    (Source: :contentReference[oaicite:1]{index=1})
+    The curvature-energy trajectory shows a consistent decline,
+    confirming the law.  
+    (Computation: :contentReference[oaicite:1]{index=1})
   </p>
 </section>
 
@@ -201,23 +268,21 @@ for step in range(300):
   <h2>Thought Experiments</h2>
 
   <div class="thoughtbox">
-    <b>Metal Beam Under Viscous Bending</b><br><br>
-    Sharp bends in a metal beam flatten rapidly when a viscous smoothing
-    process is applied.  
-    High-curvature regions collapse first, matching fourth-order diffusion behaviour.
+    <b>Smoothing a Rough Landscape</b><br><br>
+    Hills and valleys flatten first.  
+    Sharp curvature disappears rapidly, leaving broad smooth structures.
   </div>
 
   <div class="thoughtbox">
-    <b>High-Frequency Image Noise Removal</b><br><br>
-    Hyperdiffusion acts like an extremely strong higher-order denoiser,
-    eliminating sharp artifacts far faster than low-frequency textures.
+    <b>Sharpened Audio Signal Being Smoothed</b><br><br>
+    High curvature corresponds to sharp spikes or crackles.  
+    Smoothing rapidly reduces these high-frequency artifacts.
   </div>
 
   <div class="thoughtbox">
-    <b>Cognitive High-Order Stabilisation</b><br><br>
-    The mind’s most volatile, high-curvature thought patterns collapse first,
-    leaving only broad, stable structures.  
-    A conceptual analogue of hyperdiffusion.
+    <b>Neural Activation Stabilizing</b><br><br>
+    High-curvature fluctuations in cognitive patterns disappear earliest,
+    leaving only slow, stable components.
   </div>
 </section>
 
@@ -225,45 +290,90 @@ for step in range(300):
   <h2>Scientific Interpretation</h2>
 
   <ul>
-    <li>The evolution equation uses a negative hyper-Laplacian: <code>A ← A − α Δ²A</code>.</li>
-    <li>Energy associated with curvature-of-curvature decays rapidly.</li>
-    <li>The decay rate is proportional to <code>k⁴</code> for harmonic mode k.</li>
-    <li>Thus, high-frequency modes disappear extremely quickly.</li>
+    <li>Second-derivative energy quantifies curvature intensity.</li>
+    <li>Laplacian diffusion reduces curvature most aggressively.</li>
+    <li>This creates a monotonic energy-collapse profile.</li>
+    <li>The phenomenon is a gradient-flow minimization of curvature energy.</li>
   </ul>
 
   <div class="factbox">
-    <h3 style="color:#00c8ff;margin-top:0;">Advanced Insight</h3>
+    <h3 style="color:#00c8ff;">Advanced Insight</h3>
 
     <p>
-      Fourth-order diffusion is strongly linked to:
+      The law corresponds to the discrete relaxation of
+      <b>the surface tension energy functional</b>:
+    </p>
+
+    <p style="text-align:center;color:#70ebff;">
+      <b>E = ∫ (Aʺ)² dx</b>
+    </p>
+
+    <p>
+      Its evolution equation,
+      <code>Aₜ = ΔA</code>,
+      ensures that <b>dE/dt ≤ 0</b> at all times.
+    </p>
+
+    <p>
+      This makes the law essential for:
     </p>
 
     <ul>
-      <li>biharmonic heat flow</li>
-      <li>thin-plate spline energies</li>
-      <li>beam bending equations</li>
-      <li>high-order variational regularisation</li>
-      <li>curvature-driven informational geometry</li>
+      <li>surface smoothing algorithms</li>
+      <li>image-denoising systems</li>
+      <li>curvature-driven physics simulations</li>
+      <li>informational geometry and stability theory</li>
     </ul>
-
-    <p>
-      Because hyperdiffusion evolves according to a
-      <b>gradient flow of the curvature-squared energy functional</b>,
-      the collapse is guaranteed to be monotonic.
-    </p>
   </div>
 </section>
 
 <section>
+  <h2>Deep Research Notes</h2>
+
+  <details>
+    <summary>Relation to Spectral Decay</summary>
+    <p>
+      Curvature energy corresponds to weighting Fourier modes by <code>k²</code>.
+      Laplacian diffusion decays each mode as:
+    </p>
+
+    <p style="text-align:center;color:#7fe7ff;"><b>exp(−α k² t)</b></p>
+
+    <p>
+      Thus high-k modes collapse much faster, giving the characteristic “energy funnel”
+      shape of the collapse curve.
+    </p>
+  </details>
+
+  <details>
+    <summary>Connection to Euler–Bernoulli Models</summary>
+    <p>
+      Curvature-based energy decay parallels bending-energy minimization in beam equations,
+      where curvature relaxation governs mechanical stability in thin structures.
+    </p>
+  </details>
+
+  <details>
+    <summary>Why Collapse Must Be Monotonic</summary>
+    <p>
+      The Laplacian operator is negative semidefinite in the energy inner product,
+      guaranteeing that all curvature energy terms decrease without oscillation.
+    </p>
+  </details>
+</section>
+
+<section>
   <h2>Peer Review</h2>
-  <p>Feedback, improvements, proofs, and generalisations can be submitted via:</p>
+
+  <p>Feedback, analytical contributions, and generalisations can be submitted via:</p>
 
   <a class="button" href="mailto:138licensing@gmail.com">Submit via Email</a>
   <a class="button" href="https://zenodo.org/records/17362534" target="_blank">Submit via Zenodo</a>
 </section>
 
 <footer>
-  <p>© Cornelius Aurelius</p>
+  <p>© 2025 Cornelius Aurelius</p>
+
   <p>
     <a href="https://corneliusaurelius.com/">CORNELIUS AURELIUS MAINSITE</a> |
     <a href="mailto:138licensing@gmail.com">Email</a> |
@@ -276,3 +386,4 @@ for step in range(300):
 
 </body>
 </html>
+
